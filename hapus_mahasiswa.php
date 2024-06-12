@@ -27,7 +27,6 @@ if (isset($_POST["submit"])) {
         // DELETE berhasil, redirect ke tampil_mahasiswa.php + pesan
         $pesan = "Mahasiswa dengan nim = \"<b>$nim</b>\" sudah berhasil di hapus";
         $pesan = urlencode($pesan);
-        $pesan = urlencode($pesan);
         header("Location: tampil_mahasiswa.php?pesan={$pesan}");
     } else {
         die("Query gagal dijalankan: " . mysqli_errno($link) ." - " . mysqli_error($link));
